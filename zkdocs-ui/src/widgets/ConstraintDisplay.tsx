@@ -31,7 +31,8 @@ export default function ConstraintDisplay(props: ConstraintDisplayProps) {
                 <span>{getOpDisplay(props.constraint)}</span>
                 <span>{"  "}</span>
                 <span className="text-sm font-bold">
-                    {sFieldB ? sFieldB.human_name : "..."}
+                    {getOpDisplay(props.constraint) == "" ? "": (sFieldB ? sFieldB.human_name : "...")
+                        }
                 </span>
                 <span>{"  "}</span>
                 <span>{getConstraintDisplay(props.constraint)}</span>
@@ -53,7 +54,7 @@ export default function ConstraintDisplay(props: ConstraintDisplayProps) {
                 <span>{getOpDisplay(props.constraint)}</span>
                 <span>{"  "}</span>
                 <span className="text-sm font-bold px-1">
-                    {fieldBVal ? fieldBVal : "..."}
+                    {getOpDisplay(props.constraint) == "" ? "" : (fieldBVal ? fieldBVal : "...")}
                 </span>
                 <span>{"  "}</span>
                 <span>{getConstraintDisplay(props.constraint)}</span>
@@ -97,6 +98,8 @@ function getOpDisplay(constraint: ZkDocConstraint): string {
         return "+";
     } else if (constraint.op === "SUB") {
         return "-";
+    } else if (constraint.op == "NONE"){
+        return "";
     } else {
         return "?";
     }
@@ -127,6 +130,8 @@ function validateConstraint(
         mid = a + b;
     } else if (constraint.op === "SUB") {
         mid = a - b;
+    } else if (constraint.op == "NONE") {
+        mid = a;
     } else {
         console.error("unsupported op");
         return false;

@@ -11,7 +11,7 @@ export interface ZkDocField {
 export interface ZkDocConstraint {
     fieldA: string,
     fieldB: string,
-    op: "ADD" | "SUB",
+    op: "ADD" | "SUB" | "NONE",
     constraint: "LT" | "GT",
     constant?: number
     fieldCompare?: string,
@@ -28,7 +28,7 @@ export interface InstitutionDetails {
     human_name?: string
 }
 
-let VALID_CONSTRAINT_OPS = ["ADD", "SUB"];
+let VALID_CONSTRAINT_OPS = ["ADD", "SUB", "NONE"];
 let VALID_CONSTRAINT_TYPES = ["LT", "GT"];
 
 export class ZkDocSchema {

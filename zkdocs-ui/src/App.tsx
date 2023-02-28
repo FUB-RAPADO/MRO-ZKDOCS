@@ -22,13 +22,13 @@ function App() {
     let provider = useProvider();
 
     return (
-        <div className="App bg-gray-100 h-screen">
+        <div className="App bg-test h-screen">
             <header className="App-header">
-                <div className="w-100 grid grid-cols-2 bg-orange-400 p-2 shadow-sm">
+                <div className="w-100 grid grid-cols-2 bg-blue-300 p-2 shadow-sm">
                     <div>
                         <Link to="/">
                             <h1 className="font-mono text-xl font-black text-white">
-                                zkDocs
+                                zkDocs for MRO Attestations
                             </h1>
                         </Link>
                     </div>

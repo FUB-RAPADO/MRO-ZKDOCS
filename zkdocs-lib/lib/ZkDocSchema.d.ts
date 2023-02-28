@@ -7,7 +7,7 @@ export interface ZkDocField {
 export interface ZkDocConstraint {
     fieldA: string;
     fieldB: string;
-    op: "ADD" | "SUB";
+    op: "ADD" | "SUB" | "NONE";
     constraint: "LT" | "GT";
     constant?: number;
     fieldCompare?: string;

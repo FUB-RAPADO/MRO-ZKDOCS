@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ZkDocSchema = void 0;
 var ethers_1 = require("ethers");
 var FileUtils_1 = require("./FileUtils");
-var VALID_CONSTRAINT_OPS = ["ADD", "SUB"];
+var VALID_CONSTRAINT_OPS = ["ADD", "SUB", "NONE"];
 var VALID_CONSTRAINT_TYPES = ["LT", "GT"];
 var ZkDocSchema = /** @class */ (function () {
     function ZkDocSchema(json, name) {
