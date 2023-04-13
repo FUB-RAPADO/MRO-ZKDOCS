@@ -67,7 +67,7 @@ describe("Test the generator", async () => {
 
     })
     it("2 constraint circuit", async () => {
-        let schemaPath = path.join(__dirname, "test_schemas", "tax_bracket.json")
+        let schemaPath = path.join(__dirname, "test_schemas", "mro_bracket.json")
         let potPath = path.join(__dirname, "..", "build", "pot16_final.ptau");
 
         let json = readFileSync(schemaPath).toString();

@@ -1,0 +1,64 @@
+{
+    "fields": [
+        {
+            "field_name": "part_id",
+            "human_name": "Part ID",
+            "description": "Part identifier.",
+            "string": true
+        },
+        {
+            "field_name": "flight_hours",
+            "human_name": "Flight Hours",
+            "description": "Flight hours of the part."
+        },
+        {
+            "field_name": "form_id",
+            "human_name": "Latest Form ID",
+            "description": "Latest certificate identifier",
+            "string": true
+        },
+        {
+            "field_name": "mro_cycles",
+            "human_name": "MRO Cycles",
+            "description": "Total maintain, repair and overhaul cycles."
+        }
+    ],
+    "constraints": [
+        {
+            "fieldA": "flight_hours",
+            "fieldB": "mro_cycles",
+            "op": "ADD",
+            "constraint": "LT",
+            "constant": 1200 
+        },
+        {
+            "fieldA": "mro_cycles",
+            "fieldB": "mro_cycles",
+            "op": "NONE",
+            "constraint": "LT",
+            "constant": 10000 
+        }
+    ],
+    "trusted_institutions": [
+        {
+            "address": "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+            "human_name": "FAA/United States"
+        },
+        {
+            "address": "0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",
+            "human_name": "EASA"
+        },
+        {
+            "address": "0x35f30531Da281384831481499861900966e782Cc",
+            "human_name": "Authority A"
+        },
+        {
+            "address": "0x699fC82ab59C3b278d07538A05D2F0053f38B2B4",
+            "human_name": "Authority B"
+        },
+        {
+            "address": "0x8401C74DB59F67fe7A9A07910C8118807a6F9c07",
+            "human_name": "Authority C"
+        }
+    ]
+}
