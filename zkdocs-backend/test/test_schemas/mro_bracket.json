@@ -12,9 +12,9 @@
             "description": "Flight hours of the part."
         },
         {
-            "field_name": "form_id",
-            "human_name": "Latest Form ID",
-            "description": "Latest certificate identifier",
+            "field_name": "time_since_last_service",
+            "human_name": "Time Since Last Service",
+            "description": "Times (hrs) since the last service was performed.",
             "string": true
         },
         {
@@ -26,8 +26,8 @@
     "constraints": [
         {
             "fieldA": "flight_hours",
-            "fieldB": "mro_cycles",
-            "op": "ADD",
+            "fieldB": "flight_hours",
+            "op": "NONE",
             "constraint": "LT",
             "constant": 1200 
         },
@@ -50,7 +50,7 @@
         },
         {
             "address": "0x35f30531Da281384831481499861900966e782Cc",
-            "human_name": "Authority A"
+            "human_name": "Validation Network"
         },
         {
             "address": "0x699fC82ab59C3b278d07538A05D2F0053f38B2B4",
