@@ -147,8 +147,8 @@
       ]
     },
     "/Users/elinabeletski/Documents/GitHub/zkdocs/zkdocs-backend/contracts/compiled/PlonkVerifier.sol": {
-      "lastModificationDate": 1683120120548,
-      "contentHash": "b67631bb23ee4922b78e324a1761dfa6",
+      "lastModificationDate": 1685972153344,
+      "contentHash": "b0c0522e4d3cc0268bec1222381b49c5",
       "sourceName": "contracts/compiled/PlonkVerifier.sol",
       "solcConfig": {
         "version": "0.8.8",

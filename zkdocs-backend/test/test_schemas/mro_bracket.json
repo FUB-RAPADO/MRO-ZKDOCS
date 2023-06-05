@@ -14,8 +14,7 @@
         {
             "field_name": "time_since_last_service",
             "human_name": "Time Since Last Service",
-            "description": "Times (hrs) since the last service was performed.",
-            "string": true
+            "description": "Times (hrs) since the last service was performed."
         },
         {
             "field_name": "mro_cycles",
@@ -37,6 +36,13 @@
             "op": "NONE",
             "constraint": "LT",
             "constant": 10000 
+        },
+        {
+            "fieldA": "time_since_last_service",
+            "fieldB": "time_since_last_service",
+            "op": "NONE",
+            "constraint": "LT",
+            "constant": 1000 
         }
     ],
     "trusted_institutions": [
